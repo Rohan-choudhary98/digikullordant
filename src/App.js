@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Datafetch from './Datafetch';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import Singlepage from './Singlepage';
 
 
