@@ -47,7 +47,7 @@ const Singlepage = () => {
                                 <h2>STATUS:-<span>{data.status}</span></h2>
                                 <h3>LANGUAGE:-<span>{data.language}</span></h3>
                             </div>
-                            <pdangerouslySetInnerHTML={{__html:data.summary}}></p>
+                            <p dangerouslySetInnerHTML={{__html:data.summary}}></p>
                             {data.rating?.average / 2}<img id='rating' src={imgs.concat(`${String(Math.floor(data.rating?.average / 2))}.jpg`)} alt=''/>
                         </div>
                         {/* cast item fetched from cast api */}
