@@ -27,7 +27,7 @@ const Singlepage = () => {
 
         getData()
 
-    }, []);
+    },);
     console.log(data)
     console.log(data, id);
     const imgs='./stars/'
