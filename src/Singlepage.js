@@ -28,8 +28,13 @@ const Singlepage = () => {
         getData()
 
     },);
+<<<<<<< HEAD
     console.log(tdata)
     console.log(tdata, id);
+=======
+    console.log(data)
+    console.log(data, id);
+>>>>>>> aa927f4839e5f7380f12a6c2083bbc8f9db06ba5
     const imgs='./stars/'
     return (
         <>
@@ -47,8 +52,13 @@ const Singlepage = () => {
                                 <h2>STATUS:-<span>{tdata.status}</span></h2>
                                 <h3>LANGUAGE:-<span>{tdata.language}</span></h3>
                             </div>
+<<<<<<< HEAD
                             <p dangerouslySetInnerHTML={{__html:tdata.summary}}></p>
                             {tdata.rating?.average / 2}<img id='rating' src={imgs.concat(`${String(Math.floor(tdata.rating?.average / 2))}.jpg`)} alt=''/>
+=======
+                            <p dangerouslySetInnerHTML={{__html:data.summary}}></p>
+                            {data.rating?.average / 2}<img id='rating' src={imgs.concat(`${String(Math.floor(data.rating?.average / 2))}.jpg`)} alt=''/>
+>>>>>>> aa927f4839e5f7380f12a6c2083bbc8f9db06ba5
                         </div>
                         {/* cast item fetched from cast api */}
                         <div className='staringmain'>
