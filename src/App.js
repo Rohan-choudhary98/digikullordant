@@ -1,22 +1,23 @@
 import logo from './logo.svg';
-import './App.css';
-import Datafetch from './Datafetch';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Singlepage from './Singlepage';
+ import './App.css';
+// import Card from './Card';
+ import Datafetch from './Datafetch';
+ import { BrowserRouter, Routes, Route } from "react-router-dom";
+ import Singlepage from './Singlepage';
 
 
 function App() {
   return (
     <div >
       
+    {/* <Card/>  */}
+       <Routes> 
 
-      <Routes>
-
-        <Route path="/" element={<Datafetch />} />
-        <Route path="/Singlepage/:id" element={<Singlepage />} />
+        <Route path="/" element={<Datafetch />} /> */}
+        <Route path="/Singlepage/:id" element={<Singlepage />} /> 
 
 
-      </Routes>
+      </Routes> 
 
     </div>
   );

@@ -9,7 +9,7 @@ function Datafetch() {
     useEffect(() => {
         fetch(`https://api.tvmaze.com/shows`)
             .then(response => response.json())
-            .then(json => Setuser((json).slice(0, 152)))
+            .then(p => Setuser((p).slice(0, 152)))
     }, []);
     console.log(User);
     const imgs='./stars/'

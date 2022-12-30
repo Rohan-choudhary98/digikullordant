@@ -49,24 +49,34 @@
     }
     
 }
-.maincontainer{
+/* .maincontainer{
     width: 280px;
     background: linear-gradient(to left bottom,	
     #FFFFFF,	
     #c9bbbb);
     padding:10px;
-    border-radius: 5px;
-    margin: 20px;
-    display: flex;
+    border-radius: 8px;
+    /* margin: 20px; */
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
+    flex-direction: column; */
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px; */
+    /* height: 200px; */
+    
+
 .cardcontainer{
     padding-top: 3rem;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:20px; */ 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 20px;
 }
+
 .navbar{
     height: 15rem;
     background-color: #1c51ba;

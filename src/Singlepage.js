@@ -6,17 +6,17 @@ import './Fetchitem.css';
 const Singlepage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const [data, Setdata] = useState([]);
+    const [tdata, Setdata] = useState([]);
     const [datacast, setCast] = useState([])
     const getData = async () => {
         try {
             let res = await fetch(`https://api.tvmaze.com/shows/${id}`)
-            let data = await res.json()
+            let tdata = await res.json()
             let castres = await fetch(`https://api.tvmaze.com/shows/${id}?embed=cast`)
             let castdata = await castres.json();
             console.log(castdata, 'cst');
             setCast(castdata)
-            Setdata(data)
+            Setdata(tdata)
         } catch (error) {
 
         }
@@ -27,9 +27,9 @@ const Singlepage = () => {
 
         getData()
 
-    }, []);
-    console.log(data)
-    console.log(data, id);
+    },);
+    console.log(tdata)
+    console.log(tdata, id);
     const imgs='./stars/'
     return (
         <>
@@ -39,16 +39,16 @@ const Singlepage = () => {
                 <div className="app">
                     <div className="details">
                         <div className="big-img">
-                            <img style={{ width: "25rem", height: "20rem" }} src={data.image?.original} className="singleimage" alt=""></img>
+                            <img style={{ width: "25rem", height: "20rem" }} src={tdata.image?.original} className="singleimage" alt=""></img>
                         </div>
                         <div className="box">
                             <div className="row">
-                                <h2> MOVIE Name:-<span>{data?.name}</span></h2>
-                                <h2>STATUS:-<span>{data.status}</span></h2>
-                                <h3>LANGUAGE:-<span>{data.language}</span></h3>
+                                <h2> MOVIE Name:-<span>{tdata?.name}</span></h2>
+                                <h2>STATUS:-<span>{tdata.status}</span></h2>
+                                <h3>LANGUAGE:-<span>{tdata.language}</span></h3>
                             </div>
-                            <p>{data.summary}</p>
-                            {data.rating?.average / 2}<img id='rating' src={imgs.concat(`${String(Math.floor(data.rating?.average / 2))}.jpg`)} alt=''/>
+                            <p dangerouslySetInnerHTML={{__html:tdata.summary}}></p>
+                            {tdata.rating?.average / 2}<img id='rating' src={imgs.concat(`${String(Math.floor(tdata.rating?.average / 2))}.jpg`)} alt=''/>
                         </div>
                         {/* cast item fetched from cast api */}
                         <div className='staringmain'>
